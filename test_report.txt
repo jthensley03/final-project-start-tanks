@@ -42,14 +42,14 @@ FAIL src/App.test.tsx
 ------------------|---------|----------|---------|---------|-------------------
 File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------|---------|----------|---------|---------|-------------------
-All files         |       2 |        0 |    6.25 |    2.04 |                   
- src              |       2 |        0 |    6.25 |    2.04 |                   
+All files         |    1.81 |        0 |    6.25 |    1.85 |                   
+ src              |    1.81 |        0 |    6.25 |    1.85 |                   
   App.tsx         |     100 |      100 |     100 |     100 |                   
   Board.tsx       |       0 |        0 |       0 |       0 | 7-51              
   BoardSquare.tsx |       0 |        0 |       0 |       0 | 13-27             
-  Overlay.tsx     |       0 |      100 |       0 |       0 | 7-8               
+  Overlay.tsx     |       0 |      100 |       0 |       0 | 8-9               
   Pic.tsx         |       0 |        0 |       0 |       0 | 5-13              
-  Square.tsx      |       0 |      100 |       0 |       0 | 4-5               
+  Square.tsx      |       0 |        0 |       0 |       0 | 9-17              
   constants.ts    |       0 |      100 |     100 |       0 | 1                 
   game.ts         |       0 |        0 |       0 |       0 | 1-29              
  src/interfaces   |       0 |        0 |       0 |       0 |                   
@@ -59,5 +59,5 @@ All files         |       2 |        0 |    6.25 |    2.04 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.032 s
+Time:        2.127 s
 Ran all test suites.
