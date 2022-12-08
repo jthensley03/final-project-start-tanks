@@ -1,24 +1,21 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import Board from "./Board";
-
-interface NumSquareFormProps {
-    picPosition: [number, number];
-}
-
-export function NumSquareForm({
-    picPosition
-}: NumSquareFormProps): JSX.Element {
-    const [numSquares, setNumSquares] = useState(12);
+export function NumSquareForm(): JSX.Element {
+    const [numSquares, setNumSquares] = useState(9);
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+    const boardHeight = windowHeight * 0.8;
+    const boardWidth = windowWidth * 0.7;
     return (
         <div>
             <div>
                 <Form.Group
                     controlId="numSquareForm"
                     style={{
-                        position: "absolute",
+                        position: "fixed",
                         width: "130px",
-                        right: "5%",
+                        right: "2%",
                         bottom: "3%"
                     }}
                 >
@@ -34,16 +31,21 @@ export function NumSquareForm({
             </div>
             <div
                 style={{
-                    position: "absolute",
-                    top: "10%",
-                    left: "25%",
-                    width: "70%",
-                    height: "80%",
-                    border: "2px solid black",
-                    backgroundColor: "gray"
+                    position: "fixed",
+                    bottom: "10%",
+                    right: "2%",
+                    width: boardWidth.toString() + "px",
+                    height: boardHeight.toString() + "px",
+                    border: "4px solid rgb(33,37,41)",
+                    backgroundColor: "rgb(33,37,41)",
+                    borderRadius: "10px"
                 }}
             >
-                <Board picPosition={picPosition} numSquares={numSquares} />
+                <Board
+                    numSquares={numSquares}
+                    boardWidth={boardWidth}
+                    boardHeight={boardHeight}
+                />
             </div>
         </div>
     );
